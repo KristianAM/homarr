@@ -13,7 +13,7 @@ services:
     ports:
       - '7575:7575'
     networks:
-      - default
+      - homarr_default
 networks:
-  default:
+  homarr_default:
     external: true

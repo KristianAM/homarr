@@ -9,6 +9,11 @@ services:
     volumes:
       - ./homarr/appdata:/appdata
     environment:
-      - SECRET_ENCRYPTION_KEY=bf1b6f856a555b82ce334b46d769715c81634d93c75ee12d62834158ff2e28cb
+      - SECRET_ENCRYPTION_KEY=${SECRET_ENCRYPTION_KEY}
     ports:
       - '7575:7575'
+    networks:
+      - default
+networks:
+  default:
+    external: true
